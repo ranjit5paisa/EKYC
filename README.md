@@ -52,6 +52,8 @@ if (campaignCookie) {
 | `GA_Client_ID` | Google Analytics Client ID | `ga.getAll()[0].get('clientId')` | String | `123456789.1234567890` | No | Base64 encoded when redirecting |
 | `WebsiteFormType` | Form location on page | Form wrapper element or URL param | String | `hero_form_d`, `hero_form_m`, `footer_form` | Yes | `_d` = desktop, `_m` = mobile |
 | `type` | Same as WebsiteFormType | Derived from WebsiteFormType | String | `hero_form_d`, `hero_form_m`, `footer_form` | Yes | Duplicate of WebsiteFormType |
+| `Previus_Page` | Full URL of the previous page visited before reaching the current page | `document.referrer` or URL parameter | String (URL encoded) | `https://www.5paisa.com/` | No | Passed inside `URLParams`. If no referrer is available, send `Previus_Page=`. Preserve the existing API field spelling. |
+
 
 ### Code Snippet (Lines 279-304):
 ```javascript
